@@ -4,14 +4,14 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:fotos/colors/app_colors.dart';
 import 'package:fotos/styles/app_styles.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -85,6 +85,41 @@ class _LoginPageState extends State<LoginPage> {
                         height: height * 0.064,
                       ),
                       Text(
+                        'Nome',
+                        style: relewayStyle.copyWith(
+                            fontSize: 12.0,
+                            color: AppClors.blueDarkColor,
+                            fontWeight: FontWeight.w700),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Container(
+                        height: 50.0,
+                        width: width,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16.0),
+                            color: AppClors.whiteColor),
+                        child: TextFormField(
+                          style: relewayStyle.copyWith(
+                              fontWeight: FontWeight.w400,
+                              color: AppClors.blueDarkColor,
+                              fontSize: 12.0),
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              contentPadding: const EdgeInsets.only(top: 1.0),
+                              hintText: 'Digite o seu nome',
+                              hintStyle: relewayStyle.copyWith(
+                                  fontWeight: FontWeight.w400,
+                                  color:
+                                      AppClors.blueDarkColor.withOpacity(0.5),
+                                  fontSize: 12.0)),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Text(
                         'Email',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
@@ -117,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       SizedBox(
-                        height: 10.0,
+                        height: height * 0.02,
                       ),
                       Text(
                         'Senha',
@@ -160,7 +195,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextButton(
                             onPressed: () {},
                             child: Text(
-                              'Ainda não tem uma conta? Cadastre-se',
+                              'Já tem uma conta? Entrar em contato',
                               style: relewayStyle.copyWith(
                                   fontSize: 12.0,
                                   color: AppClors.mainBlueColor,
@@ -183,7 +218,7 @@ class _LoginPageState extends State<LoginPage> {
                               color: AppClors.mainBlueColor,
                             ),
                             child: Text(
-                              'Entrar',
+                              'Cadastrar',
                               style: relewayStyle.copyWith(
                                 fontWeight: FontWeight.w700,
                                 color: AppClors.whiteColor,
