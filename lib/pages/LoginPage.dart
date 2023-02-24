@@ -64,75 +64,79 @@ class _LoginPageState extends State<LoginPage> {
                                 fontSize: 25.0))
                       ])),
                       SizedBox(
-                        height: height * 0.064,
+                        height: height * 0.12,
                       ),
-                      Text(
-                        'Email',
-                        style: relewayStyle.copyWith(
-                            fontSize: 12.0,
-                            color: AppClors.grayBackgroundColor,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Container(
-                        height: 50.0,
-                        width: width,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16.0),
-                            color: AppClors.whiteColor),
-                        child: TextFormField(
-                          style: relewayStyle.copyWith(
-                              fontWeight: FontWeight.w400,
-                              color: AppClors.grayBackgroundColor,
-                              fontSize: 12.0),
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              contentPadding: const EdgeInsets.only(top: 1.0),
-                              hintText: 'Entre com o e-mail',
-                              hintStyle: relewayStyle.copyWith(
-                                  fontWeight: FontWeight.w400,
-                                  color: AppClors.grayBackgroundColor
-                                      .withOpacity(0.5),
-                                  fontSize: 12.0)),
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Email',
+                            style: relewayStyle.copyWith(
+                                fontSize: 12.0,
+                                color: AppClors.grayBackgroundColor,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          SizedBox(
+                            height: height * 0.02,
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16.0),
+                                color: AppClors.whiteColor),
+                            child: TextField(
+                              style: TextStyle(
+                                  color: AppClors.grayBackgroundColor),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(top: 14.0),
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                  color: AppClors.grayBackgroundColor,
+                                ),
+                                hintText: 'Entre com o seu e-mail',
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
-                      Text(
-                        'Senha',
-                        style: relewayStyle.copyWith(
-                            fontSize: 12.0,
-                            color: AppClors.grayBackgroundColor,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Container(
-                        height: 50.0,
-                        width: width,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16.0),
-                            color: AppClors.whiteColor),
-                        child: TextFormField(
-                          style: relewayStyle.copyWith(
-                              fontWeight: FontWeight.w400,
-                              color: AppClors.grayBackgroundColor,
-                              fontSize: 12.0),
-                          obscureText: true,
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              contentPadding: const EdgeInsets.only(top: 1.0),
-                              hintText: 'Entre com a senha',
-                              hintStyle: relewayStyle.copyWith(
-                                  fontWeight: FontWeight.w400,
-                                  color: AppClors.grayBackgroundColor
-                                      .withOpacity(0.5),
-                                  fontSize: 12.0)),
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Senha',
+                            style: relewayStyle.copyWith(
+                                fontSize: 12.0,
+                                color: AppClors.grayBackgroundColor,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          SizedBox(
+                            height: height * 0.02,
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16.0),
+                                color: AppClors.whiteColor),
+                            child: TextField(
+                              obscureText: true,
+                              style: TextStyle(
+                                  color: AppClors.grayBackgroundColor),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(top: 14.0),
+                                prefixIcon: Icon(
+                                  Icons.lock,
+                                  color: AppClors.grayBackgroundColor,
+                                ),
+                                hintText: 'Entre com o seu e-mail',
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                       SizedBox(
                         height: height * 0.02,
