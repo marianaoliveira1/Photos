@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fotos/pages/FirstPage.dart';
-import 'package:fotos/pages/LoginPage.dart';
-import 'package:fotos/pages/RegisterPae.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
       )),
       title: 'Fotos',
       debugShowCheckedModeBanner: false,
-      home: RegisterPage(),
+      home: FirstPage(),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:fotos/colors/app_colors.dart';
+import 'package:fotos/pages/HomePage.dart';
 import 'package:fotos/pages/LoginPage.dart';
 import 'package:fotos/styles/app_styles.dart';
 
@@ -200,7 +201,13 @@ class _RegisterPageState extends State<RegisterPage> {
                       Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()),
+                            );
+                          },
                           borderRadius: BorderRadius.circular(16.0),
                           child: Ink(
                             padding: const EdgeInsets.symmetric(
