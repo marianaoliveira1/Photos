@@ -133,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                                   Icons.lock,
                                   color: AppClors.grayBackgroundColor,
                                 ),
-                                hintText: 'Entre com o seu e-mail',
+                                hintText: 'Entre com a sua senha',
                               ),
                             ),
                           )

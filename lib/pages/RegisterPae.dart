@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SizedBox(
-                        height: height * 0.145,
+                        height: height * 0.1,
                       ),
                       RichText(
                           text: TextSpan(children: [
@@ -59,14 +59,14 @@ class _RegisterPageState extends State<RegisterPage> {
                         height: height * 0.03,
                       ),
                       Text(
-                        'Hey, insira seus dados \npara criar a sua conta',
+                        'Hey, insira seus dados para criar a sua conta',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
                             color: AppClors.textColor),
                       ),
                       SizedBox(
-                        height: height * 0.12,
+                        height: height * 0.05,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,7 +96,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   Icons.person,
                                   color: AppClors.grayBackgroundColor,
                                 ),
-                                hintText: 'Digite o seu email',
+                                hintText: 'Digite o seu nome',
                               ),
                             ),
                           )
