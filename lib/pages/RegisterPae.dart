@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:fotos/colors/app_colors.dart';
+import 'package:fotos/pages/LoginPage.dart';
 import 'package:fotos/styles/app_styles.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -29,24 +30,6 @@ class _RegisterPageState extends State<RegisterPage> {
               Expanded(
                 child: Container(
                   height: height,
-                  color: AppClors.mainBlueColor,
-                  child: Center(
-                    child: Text(
-                      'A aventura \ncomeça aqui',
-                      style: relewayStyle.copyWith(
-                          fontSize: 48.0,
-                          color: AppClors.whiteColor,
-                          fontWeight: FontWeight.w800),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: height * 0.1,
-              ),
-              Expanded(
-                child: Container(
-                  height: height,
                   margin: EdgeInsets.symmetric(horizontal: height * 0.10),
                   color: AppClors.backColor,
                   child: Column(
@@ -62,20 +45,20 @@ class _RegisterPageState extends State<RegisterPage> {
                             text: 'Olá, ',
                             style: relewayStyle.copyWith(
                                 fontSize: 25.0,
-                                color: AppClors.blueDarkColor,
+                                color: AppClors.grayBackgroundColor,
                                 fontWeight: FontWeight.normal)),
                         TextSpan(
-                            text: 'bem vindo de volta',
+                            text: 'crie a sua conta',
                             style: relewayStyle.copyWith(
                                 fontWeight: FontWeight.w900,
-                                color: AppClors.blueDarkColor,
+                                color: AppClors.grayBackgroundColor,
                                 fontSize: 25.0))
                       ])),
                       SizedBox(
                         height: height * 0.03,
                       ),
                       Text(
-                        'Hey, insira seus dados \npara entrar na sua conta',
+                        'Hey, insira seus dados \npara criar a sua conta',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
@@ -88,7 +71,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         'Nome',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
-                            color: AppClors.blueDarkColor,
+                            color: AppClors.grayBackgroundColor,
                             fontWeight: FontWeight.w700),
                       ),
                       SizedBox(
@@ -103,7 +86,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         child: TextFormField(
                           style: relewayStyle.copyWith(
                               fontWeight: FontWeight.w400,
-                              color: AppClors.blueDarkColor,
+                              color: AppClors.grayBackgroundColor,
                               fontSize: 12.0),
                           decoration: InputDecoration(
                               border: InputBorder.none,
@@ -111,8 +94,8 @@ class _RegisterPageState extends State<RegisterPage> {
                               hintText: 'Digite o seu nome',
                               hintStyle: relewayStyle.copyWith(
                                   fontWeight: FontWeight.w400,
-                                  color:
-                                      AppClors.blueDarkColor.withOpacity(0.5),
+                                  color: AppClors.grayBackgroundColor
+                                      .withOpacity(0.5),
                                   fontSize: 12.0)),
                         ),
                       ),
@@ -123,7 +106,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         'Email',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
-                            color: AppClors.blueDarkColor,
+                            color: AppClors.grayBackgroundColor,
                             fontWeight: FontWeight.w700),
                       ),
                       SizedBox(
@@ -138,7 +121,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         child: TextFormField(
                           style: relewayStyle.copyWith(
                               fontWeight: FontWeight.w400,
-                              color: AppClors.blueDarkColor,
+                              color: AppClors.grayBackgroundColor,
                               fontSize: 12.0),
                           decoration: InputDecoration(
                               border: InputBorder.none,
@@ -146,8 +129,8 @@ class _RegisterPageState extends State<RegisterPage> {
                               hintText: 'Entre com o e-mail',
                               hintStyle: relewayStyle.copyWith(
                                   fontWeight: FontWeight.w400,
-                                  color:
-                                      AppClors.blueDarkColor.withOpacity(0.5),
+                                  color: AppClors.grayBackgroundColor
+                                      .withOpacity(0.5),
                                   fontSize: 12.0)),
                         ),
                       ),
@@ -158,7 +141,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         'Senha',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
-                            color: AppClors.blueDarkColor,
+                            color: AppClors.grayBackgroundColor,
                             fontWeight: FontWeight.w700),
                       ),
                       SizedBox(
@@ -173,7 +156,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         child: TextFormField(
                           style: relewayStyle.copyWith(
                               fontWeight: FontWeight.w400,
-                              color: AppClors.blueDarkColor,
+                              color: AppClors.grayBackgroundColor,
                               fontSize: 12.0),
                           obscureText: true,
                           decoration: InputDecoration(
@@ -182,8 +165,8 @@ class _RegisterPageState extends State<RegisterPage> {
                               hintText: 'Entre com a senha',
                               hintStyle: relewayStyle.copyWith(
                                   fontWeight: FontWeight.w400,
-                                  color:
-                                      AppClors.blueDarkColor.withOpacity(0.5),
+                                  color: AppClors.grayBackgroundColor
+                                      .withOpacity(0.5),
                                   fontSize: 12.0)),
                         ),
                       ),
@@ -193,12 +176,18 @@ class _RegisterPageState extends State<RegisterPage> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginPage()),
+                              );
+                            },
                             child: Text(
                               'Já tem uma conta? Entrar em contato',
                               style: relewayStyle.copyWith(
                                   fontSize: 12.0,
-                                  color: AppClors.mainBlueColor,
+                                  color: AppClors.grayBackgroundColor,
                                   fontWeight: FontWeight.w300),
                             )),
                       ),
@@ -215,7 +204,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 horizontal: 70.0, vertical: 18.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16.0),
-                              color: AppClors.mainBlueColor,
+                              color: AppClors.grayBackgroundColor,
                             ),
                             child: Text(
                               'Cadastrar',
@@ -231,7 +220,16 @@ class _RegisterPageState extends State<RegisterPage> {
                     ],
                   ),
                 ),
-              )
+              ),
+              SizedBox(
+                width: height * 0.1,
+              ),
+              Expanded(
+                child: Container(
+                  height: height,
+                  color: AppClors.grayBackgroundColor,
+                ),
+              ),
             ],
           ),
         ));

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:fotos/colors/app_colors.dart';
+import 'package:fotos/pages/RegisterPae.dart';
 import 'package:fotos/styles/app_styles.dart';
 
 class LoginPage extends StatefulWidget {
@@ -29,16 +30,7 @@ class _LoginPageState extends State<LoginPage> {
               Expanded(
                 child: Container(
                   height: height,
-                  color: AppClors.mainBlueColor,
-                  child: Center(
-                    child: Text(
-                      'A aventura \ncomeça aqui',
-                      style: relewayStyle.copyWith(
-                          fontSize: 48.0,
-                          color: AppClors.whiteColor,
-                          fontWeight: FontWeight.w800),
-                    ),
-                  ),
+                  color: AppClors.grayBackgroundColor,
                 ),
               ),
               SizedBox(
@@ -62,25 +54,15 @@ class _LoginPageState extends State<LoginPage> {
                             text: 'Olá, ',
                             style: relewayStyle.copyWith(
                                 fontSize: 25.0,
-                                color: AppClors.blueDarkColor,
+                                color: AppClors.grayBackgroundColor,
                                 fontWeight: FontWeight.normal)),
                         TextSpan(
                             text: 'bem vindo de volta',
                             style: relewayStyle.copyWith(
                                 fontWeight: FontWeight.w900,
-                                color: AppClors.blueDarkColor,
+                                color: AppClors.grayBackgroundColor,
                                 fontSize: 25.0))
                       ])),
-                      SizedBox(
-                        height: height * 0.03,
-                      ),
-                      Text(
-                        'Hey, insira seus dados \npara entrar na sua conta',
-                        style: relewayStyle.copyWith(
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.w400,
-                            color: AppClors.textColor),
-                      ),
                       SizedBox(
                         height: height * 0.064,
                       ),
@@ -88,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                         'Email',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
-                            color: AppClors.blueDarkColor,
+                            color: AppClors.grayBackgroundColor,
                             fontWeight: FontWeight.w700),
                       ),
                       SizedBox(
@@ -103,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextFormField(
                           style: relewayStyle.copyWith(
                               fontWeight: FontWeight.w400,
-                              color: AppClors.blueDarkColor,
+                              color: AppClors.grayBackgroundColor,
                               fontSize: 12.0),
                           decoration: InputDecoration(
                               border: InputBorder.none,
@@ -111,8 +93,8 @@ class _LoginPageState extends State<LoginPage> {
                               hintText: 'Entre com o e-mail',
                               hintStyle: relewayStyle.copyWith(
                                   fontWeight: FontWeight.w400,
-                                  color:
-                                      AppClors.blueDarkColor.withOpacity(0.5),
+                                  color: AppClors.grayBackgroundColor
+                                      .withOpacity(0.5),
                                   fontSize: 12.0)),
                         ),
                       ),
@@ -123,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                         'Senha',
                         style: relewayStyle.copyWith(
                             fontSize: 12.0,
-                            color: AppClors.blueDarkColor,
+                            color: AppClors.grayBackgroundColor,
                             fontWeight: FontWeight.w700),
                       ),
                       SizedBox(
@@ -138,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextFormField(
                           style: relewayStyle.copyWith(
                               fontWeight: FontWeight.w400,
-                              color: AppClors.blueDarkColor,
+                              color: AppClors.grayBackgroundColor,
                               fontSize: 12.0),
                           obscureText: true,
                           decoration: InputDecoration(
@@ -147,8 +129,8 @@ class _LoginPageState extends State<LoginPage> {
                               hintText: 'Entre com a senha',
                               hintStyle: relewayStyle.copyWith(
                                   fontWeight: FontWeight.w400,
-                                  color:
-                                      AppClors.blueDarkColor.withOpacity(0.5),
+                                  color: AppClors.grayBackgroundColor
+                                      .withOpacity(0.5),
                                   fontSize: 12.0)),
                         ),
                       ),
@@ -158,12 +140,18 @@ class _LoginPageState extends State<LoginPage> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => RegisterPage()),
+                              );
+                            },
                             child: Text(
                               'Ainda não tem uma conta? Cadastre-se',
                               style: relewayStyle.copyWith(
                                   fontSize: 12.0,
-                                  color: AppClors.mainBlueColor,
+                                  color: AppClors.grayBackgroundColor,
                                   fontWeight: FontWeight.w300),
                             )),
                       ),
@@ -180,7 +168,7 @@ class _LoginPageState extends State<LoginPage> {
                                 horizontal: 70.0, vertical: 18.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16.0),
-                              color: AppClors.mainBlueColor,
+                              color: AppClors.grayBackgroundColor,
                             ),
                             child: Text(
                               'Entrar',
